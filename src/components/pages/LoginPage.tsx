@@ -2,9 +2,11 @@ import { useForm } from "react-hook-form";
 
 const LoginPage = () => {
   const { register, handleSubmit } = useForm();
+
   return (
     <div>
       <h1>Bienvenue chez nous !</h1>
+      <br />
       <h2>Connectez-vous</h2>
 
       <form
@@ -18,7 +20,7 @@ const LoginPage = () => {
           type="text"
           required
           {...register("firstName", { required: true, minLength: 2 })}
-          placeholder="Entre votre prénom..."
+          placeholder="Entrez votre prénom..."
         />
         <button>Accédez à votre espace</button>
       </form>
