@@ -8,8 +8,7 @@ const LoginForm = () => {
     <form
       onSubmit={handleSubmit((data) => {
         if (data.firstName.length > 1) {
-          alert(`Bonjour ${data.firstName}`);
-          navigate("/order");
+          navigate(`order/${data.firstName}`);
         }
       })}
     >
