@@ -1,12 +1,14 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
   return (
     <form
       onSubmit={handleSubmit((data) => {
         if (data.firstName.length > 1) {
-          alert(`Bonjour ${data.firstName}`);
+          navigate(`order/${data.firstName}`);
         }
       })}
     >
