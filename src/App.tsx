@@ -1,8 +1,12 @@
 import "./App.css";
-import LoginPage from "./components/pages/login/LoginPage";
+import AllRoutes from "./routes/AllRoutes";
 
 const App = () => {
-  return <LoginPage />;
+  return (
+    <>
+      <AllRoutes />
+    </>
+  );
 };
 
 export default App;
